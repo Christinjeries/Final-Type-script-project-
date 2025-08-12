@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipflop game</title>
+    <script src="./dist/index.js" defer></script>
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+<body>
+    <div class="title">FlipFlop Game</div>
+
+<div class="header">
+        <div class="header__score">
+            <div class="header__label">Score:</div>
+            <div id="score" class="header__value">0</div>
+        </div>
+        <div class="header__timer">
+            <div class="header__label">Time:</div>
+            <div id="timer" class="header__value">60</div>
+        </div>
+</div>
+    
+    
+    <div id="gameArea" class="game">
+        <div id="flipflop" class="game__flipflop"></div>
+        <div id="person" class="game__person"></div>
+    </div>
+    
+    <div class="controls">
+        <button id="startBtn" class="controls__start">Start Game</button>
+        <button id="restartBtn" class="controls__restart" style="display: none;">Restart</button>
+    </div>
+    
+    <div class="instructions">
+        <h3>How to Play:</h3>
+        <p>Use ARROW KEYS to move the flip-flop</p>
+        <p>Touch the person to score points!</p>
+        <p>You have 60 seconds to get as many points as possible</p>
+    </div>
+    
+    <div id="gameOverModal" class="modal" style="display: none;">
+        <div class="modal__content">
+            <h2>Game Over!</h2>
+            <p>Your final score: <span id="finalScore">0</span></p>
+            <button id="playAgainBtn" class="modal__playagain">Play Again</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
